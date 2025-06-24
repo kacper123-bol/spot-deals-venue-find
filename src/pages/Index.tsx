@@ -9,41 +9,41 @@ const mockVenues = [
   {
     id: 1,
     name: "Cafe Milano",
-    type: "Kawiarnia",
-    location: "Warszawa, Śródmieście",
+    type: "Cafe",
+    location: "Warsaw, Downtown",
     originalPrice: 120,
     discountedPrice: 80,
     discount: 33,
     capacity: 40,
     image: "/placeholder.svg",
-    description: "Przytulna kawiarnia w centrum miasta z atmosferą włoskiego bistro",
-    availableSlots: ["14:00-16:00", "20:00-22:00"]
+    description: "Cozy cafe in the city center with Italian bistro atmosphere",
+    availableSlots: ["2:00-4:00 PM", "8:00-10:00 PM"]
   },
   {
     id: 2,
-    name: "Sala Eventowa Crystal",
-    type: "Sala eventowa",
-    location: "Kraków, Kazimierz",
+    name: "Crystal Event Hall",
+    type: "Event Hall",
+    location: "Krakow, Kazimierz",
     originalPrice: 500,
     discountedPrice: 300,
     discount: 40,
     capacity: 120,
     image: "/placeholder.svg",
-    description: "Elegancka sala idealna na konferencje i wydarzenia biznesowe",
-    availableSlots: ["18:00-23:00"]
+    description: "Elegant hall perfect for conferences and business events",
+    availableSlots: ["6:00-11:00 PM"]
   },
   {
     id: 3,
-    name: "Pub Stary Port",
+    name: "Old Port Pub",
     type: "Pub",
-    location: "Gdańsk, Stare Miasto",
+    location: "Gdansk, Old Town",
     originalPrice: 200,
     discountedPrice: 140,
     discount: 30,
     capacity: 60,
     image: "/placeholder.svg",
-    description: "Klimatyczny pub z widokiem na Motławę, idealny na prywatne imprezy",
-    availableSlots: ["15:00-18:00", "21:00-24:00"]
+    description: "Atmospheric pub with Motlawa river view, perfect for private parties",
+    availableSlots: ["3:00-6:00 PM", "9:00 PM-12:00 AM"]
   }
 ];
 
@@ -62,7 +62,7 @@ const Index = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50">
       <HeroSection />
       
       <div className="container mx-auto px-4 py-8">
@@ -83,7 +83,7 @@ const Index = () => {
         
         {filteredVenues.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">Brak wyników dla podanych kryteriów</p>
+            <p className="text-gray-500 text-lg">No results found for the specified criteria</p>
           </div>
         )}
       </div>

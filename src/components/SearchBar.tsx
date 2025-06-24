@@ -14,10 +14,10 @@ export const SearchBar = ({ searchTerm, onSearchChange }: SearchBarProps) => {
         <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
         <Input
           type="text"
-          placeholder="Szukaj lokali, miast lub typów miejsc..."
+          placeholder="Search venues, cities or venue types..."
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="pl-12 pr-4 py-3 text-lg border-2 border-gray-200 rounded-full focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200"
+          className="pl-12 pr-4 py-3 text-lg border-2 border-gray-200 rounded-full focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all duration-200"
         />
       </div>
     </div>

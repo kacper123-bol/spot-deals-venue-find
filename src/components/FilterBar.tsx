@@ -19,14 +19,14 @@ export const FilterBar = ({
       <div className="flex-1">
         <Select value={selectedType} onValueChange={onTypeChange}>
           <SelectTrigger className="w-full">
-            <SelectValue placeholder="Typ lokalu" />
+            <SelectValue placeholder="Venue type" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">Wszystkie typy</SelectItem>
-            <SelectItem value="Kawiarnia">Kawiarnia</SelectItem>
-            <SelectItem value="Restauracja">Restauracja</SelectItem>
+            <SelectItem value="all">All types</SelectItem>
+            <SelectItem value="Cafe">Cafe</SelectItem>
+            <SelectItem value="Restaurant">Restaurant</SelectItem>
             <SelectItem value="Pub">Pub</SelectItem>
-            <SelectItem value="Sala eventowa">Sala eventowa</SelectItem>
+            <SelectItem value="Event Hall">Event Hall</SelectItem>
             <SelectItem value="Club">Club</SelectItem>
           </SelectContent>
         </Select>
@@ -35,15 +35,15 @@ export const FilterBar = ({
       <div className="flex-1">
         <Select value={selectedLocation} onValueChange={onLocationChange}>
           <SelectTrigger className="w-full">
-            <SelectValue placeholder="Lokalizacja" />
+            <SelectValue placeholder="Location" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">Wszystkie miasta</SelectItem>
-            <SelectItem value="Warszawa">Warszawa</SelectItem>
-            <SelectItem value="Kraków">Kraków</SelectItem>
-            <SelectItem value="Gdańsk">Gdańsk</SelectItem>
-            <SelectItem value="Wrocław">Wrocław</SelectItem>
-            <SelectItem value="Poznań">Poznań</SelectItem>
+            <SelectItem value="all">All cities</SelectItem>
+            <SelectItem value="Warsaw">Warsaw</SelectItem>
+            <SelectItem value="Krakow">Krakow</SelectItem>
+            <SelectItem value="Gdansk">Gdansk</SelectItem>
+            <SelectItem value="Wroclaw">Wroclaw</SelectItem>
+            <SelectItem value="Poznan">Poznan</SelectItem>
           </SelectContent>
         </Select>
       </div>
