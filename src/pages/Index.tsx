@@ -16,7 +16,7 @@ const mockVenues = [
     discount: 33,
     capacity: 40,
     image: "/placeholder.svg",
-    description: "Cozy cafe in the city center with Italian bistro atmosphere",
+    description: "Cozy cafe in the city center with Italian bistro atmosphere and modern design",
     availableSlots: ["2:00-4:00 PM", "8:00-10:00 PM"]
   },
   {
@@ -29,7 +29,7 @@ const mockVenues = [
     discount: 40,
     capacity: 120,
     image: "/placeholder.svg",
-    description: "Elegant hall perfect for conferences and business events",
+    description: "Elegant hall perfect for conferences and business events with state-of-the-art facilities",
     availableSlots: ["6:00-11:00 PM"]
   },
   {
@@ -42,7 +42,7 @@ const mockVenues = [
     discount: 30,
     capacity: 60,
     image: "/placeholder.svg",
-    description: "Atmospheric pub with Motlawa river view, perfect for private parties",
+    description: "Atmospheric pub with Motlawa river view, perfect for private parties and gatherings",
     availableSlots: ["3:00-6:00 PM", "9:00 PM-12:00 AM"]
   }
 ];
@@ -62,28 +62,29 @@ const Index = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50">
+    <div className="min-h-screen bg-gray-50">
       <HeroSection />
       
-      <div className="container mx-auto px-4 py-8">
-        <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+      <div className="container mx-auto px-6 py-16">
+        <div className="space-y-8 mb-16">
+          <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+          <FilterBar 
+            selectedType={selectedType}
+            selectedLocation={selectedLocation}
+            onTypeChange={setSelectedType}
+            onLocationChange={setSelectedLocation}
+          />
+        </div>
         
-        <FilterBar 
-          selectedType={selectedType}
-          selectedLocation={selectedLocation}
-          onTypeChange={setSelectedType}
-          onLocationChange={setSelectedLocation}
-        />
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredVenues.map(venue => (
             <VenueCard key={venue.id} venue={venue} />
           ))}
         </div>
         
         {filteredVenues.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">No results found for the specified criteria</p>
+          <div className="text-center py-16">
+            <p className="text-gray-500 text-lg font-light">No venues found matching your criteria</p>
           </div>
         )}
       </div>

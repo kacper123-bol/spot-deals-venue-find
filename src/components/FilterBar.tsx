@@ -15,13 +15,13 @@ export const FilterBar = ({
   onLocationChange 
 }: FilterBarProps) => {
   return (
-    <div className="flex flex-col sm:flex-row gap-4 max-w-4xl mx-auto mt-8">
+    <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
       <div className="flex-1">
         <Select value={selectedType} onValueChange={onTypeChange}>
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder="Venue type" />
+          <SelectTrigger className="h-12 rounded-xl border-gray-200 minimal-shadow bg-white">
+            <SelectValue placeholder="Type" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-white border-gray-200 minimal-shadow-lg">
             <SelectItem value="all">All types</SelectItem>
             <SelectItem value="Cafe">Cafe</SelectItem>
             <SelectItem value="Restaurant">Restaurant</SelectItem>
@@ -34,10 +34,10 @@ export const FilterBar = ({
       
       <div className="flex-1">
         <Select value={selectedLocation} onValueChange={onLocationChange}>
-          <SelectTrigger className="w-full">
+          <SelectTrigger className="h-12 rounded-xl border-gray-200 minimal-shadow bg-white">
             <SelectValue placeholder="Location" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-white border-gray-200 minimal-shadow-lg">
             <SelectItem value="all">All cities</SelectItem>
             <SelectItem value="Warsaw">Warsaw</SelectItem>
             <SelectItem value="Krakow">Krakow</SelectItem>
